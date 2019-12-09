@@ -20,25 +20,11 @@ export default function Calendar(props) {
 
   const [cssId, setCssId] = useState('')
 
-  // const handleHeight = () => {
-  //   const windowWidth = window.innerWidth
-
-  //   if (windowWidth === 400) {
-  //     setViewHeight(700)
-  //     console.log("alfjakhfa")
-  //     return viewHeight
-  //   } else {
-  //     setViewHeight(475)
-  //     return viewHeight
-  //   }
-  // }
 
   if (window.innerWidth <= 400){
     props.setViewHeight(500)
-    // props.setCssId('mobile')
   } else {
     props.setViewHeight(450)
-    // props.setCssId('desktop')
   }
 
     
@@ -48,9 +34,6 @@ export default function Calendar(props) {
 
   const HandleEventClick = (info) => {
     let eventInfo = info.event;
-    // console.log(eventInfo.extendedProps.category_name)
-
-    console.log(eventInfo.start.toUTCString())
     Swal.fire({
       title: eventInfo.title,
       html:
@@ -121,11 +104,7 @@ export default function Calendar(props) {
     }).then(result => {
       if (result.value) {
         props.deleteAppointment(eventInfo.id)
-        // axios.delete(`/api/appointments/${props.user_id}`).then((res) =>{
-        //   console.log("im inside the axios delete")
-        // })
 
-        console.log("after axios")
         eventInfo.remove()
         Swal.fire("Deleted!", "Your Event has been deleted.", "success");
       }
@@ -146,7 +125,6 @@ export default function Calendar(props) {
       </>
     );
   }
-  console.log(props)
 
   // allows us to see the modal once a date is clicked
   function AppointmetModal() {
@@ -154,8 +132,6 @@ export default function Calendar(props) {
       <>
         < Modal show={show}>
           <NewAppointment
-            // setEventState={setEventState}
-            // eventState={eventState}
             setToggle={props.setToggle}
            categories={props.categories}
            setShow={setShow}
@@ -173,7 +149,6 @@ export default function Calendar(props) {
     <div className="calendar">
     <FullCalendar
     height={520}
-     windowResize={console.log("window size changed", window.innerWidth)}
      timeZone={"EST"}
      eventClick={HandleEventClick}
      defaultView="dayGridMonth" 

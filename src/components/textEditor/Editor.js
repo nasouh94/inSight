@@ -9,7 +9,6 @@ import styled from "tachyons-components";
 import axios from 'axios';
 
 export default function Editor(props) {
-	console.log(props);
 
 
 	const Container = styled("div")`
