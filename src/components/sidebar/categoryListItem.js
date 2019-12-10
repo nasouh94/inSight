@@ -25,11 +25,6 @@ export default function CategoryListItem(props) {
           }}}
           icons={false}
         />
-        {/* <span
-          className="categoryTitle"
-          onClick={() => props.showCategory(props.name)}>
-            {props.name}
-        </span> */}
         <Link to={`/categories/${props.category.id}`} className='categoryTitle'>{props.name}</Link>
         <div className="test" data-event='click' data-tip data-for={props.category.id.toString()} onClick={() => console.log('toggle menu',props.category.category_name)}>
         <ReactTooltip place="right" id={props.category.id.toString()} clickable={true} effect="solid" isCapture={true}>
