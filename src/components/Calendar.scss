@@ -55,13 +55,7 @@
   border-radius: 5em !important;
   background-color: #091A27 !important;
 }
-.fc-content {
-  // z-index: -1;
-  // margin-top: -2em !important;
-  // padding-top: 1em;
-  // padding-left: 1em;
-  // height: 1.5em !important;
-}
+
 
 .fc-day-number{
   z-index: 1000 !important;
@@ -149,10 +143,7 @@ h2 {
 }
 
 .fc-day {
-  // margin-top: -10em;
-  // border-spacing: 5em !important;
   background-color: white !important;
-  // border-radius: 1em;
 }
 
 
@@ -160,10 +151,6 @@ h2 {
   background-color: aquamarine
 }
 
-// .fc-day:hover{
-//   background-color: red;
-
-// }
 
 .day-highlight {
   background-color: red !important;
@@ -171,11 +158,6 @@ h2 {
 
 }
 
-// @keyframes expand {
-//   from {
-//     transform: scale(0);
-//     opacity: 0;
-//   }
 
 @media only screen 
   and (max-device-width: 480px)
